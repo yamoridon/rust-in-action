@@ -86,6 +86,7 @@ impl ActionKV {
                 }
             };
 
+            println!("index of {} is {}", String::from_utf8_lossy(&kv.key), current_position);
             self.index.insert(kv.key, current_position);
         }
 

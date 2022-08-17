@@ -68,6 +68,50 @@
             "sourceMap": {
                 "/rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/": "${env:HOME}/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/"
             }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'akv_disk'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=akv_disk",
+                    "--package=actionkv"
+                ],
+                "filter": {
+                    "name": "akv_disk",
+                    "kind": "bin"
+                }
+            },
+            "args": ["database", "get", "name"],
+            "cwd": "${workspaceFolder}",
+                        "sourceMap": {
+                "/rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/": "${env:HOME}/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/"
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'akv_disk'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=akv_disk",
+                    "--package=actionkv"
+                ],
+                "filter": {
+                    "name": "akv_disk",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "sourceMap": {
+                "/rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/": "${env:HOME}/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/"
+            }
         }
+ 
     ]
 }
