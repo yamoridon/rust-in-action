@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'list-1-2-penguins'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=list-1-2-penguins",
+                    "--package=list-1-2-penguins"
+                ],
+                "filter": {
+                    "name": "list-1-2-penguins",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "sourceMap": {
+                "/rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/": "${env:HOME}/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/"
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'list-1-2-penguins'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=list-1-2-penguins",
+                    "--package=list-1-2-penguins"
+                ],
+                "filter": {
+                    "name": "list-1-2-penguins",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
