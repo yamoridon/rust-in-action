@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'mget'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=mget",
+                    "--package=mget"
+                ],
+                "filter": {
+                    "name": "mget",
+                    "kind": "bin"
+                }
+            },
+            "args": ["http://example.com", "tap-rust"],
+            "cwd": "${workspaceFolder}",
+            "sourceMap": {
+                "/rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/": "${env:HOME}/.rustup/toolchains/stable-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/"
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'mget'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=mget",
+                    "--package=mget"
+                ],
+                "filter": {
+                    "name": "mget",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
